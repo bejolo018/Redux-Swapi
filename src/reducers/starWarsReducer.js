@@ -1,7 +1,15 @@
-import /* we need our action types here*/ "../actions";
+import /* we need our action types here*/ 
+{
+  FETCHING,
+  SUCCESSS,
+  FAILURE,
+} from "../actions";
+
 const initialState = {
-  characters: []
   // Array characters, Boolean fetching, null error.
+  characters: [],
+  fetching: false,
+  error: null
 };
 export const charsReducer = (state = initialState, action) => {
   switch (action.type) {
